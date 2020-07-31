@@ -1,8 +1,8 @@
-import React from 'react';
+import React, {useRef} from 'react';
 import InteractableVideo from "./InteractableVideo";
 
 export default function App() {
-    const videoRef = React.createRef();
+    const videoRef = useRef();
 
     return (
         <div>

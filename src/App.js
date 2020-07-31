@@ -1,10 +1,20 @@
 import React from 'react';
-import AutoFocusTextInput from "./AutoFocusTextInput";
+import InteractableVideo from "./InteractableVideo";
 
-const App = () => {
+export default function App() {
+    const videoRef = React.createRef();
+
     return (
-        <AutoFocusTextInput asdf={'asdf'}/>
-    )
-};
+        <div>
+            <InteractableVideo ref={videoRef}/>
 
-export default App;
+            <button onClick={() => videoRef.current.play()}>
+                Also Play
+            </button>
+
+            <button onClick={() => videoRef.current.pause()}>
+                Also Stop
+            </button>
+        </div>
+    )
+}

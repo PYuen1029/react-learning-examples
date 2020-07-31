@@ -1,10 +1,13 @@
 import React from 'react';
 import Cars from "./Cars";
+import CloserProvider from "./CloserProvider";
 
 const ProductList = () => (
     <div className="product-list">
         <h2>Product list:</h2>
-        <Cars />
+        <CloserProvider>
+            <Cars />
+        </CloserProvider>
         {/* Other potential product categories which we will skip for this demo: */}
         {/* <Electronics /> */}
         {/* <Clothes /> */}
